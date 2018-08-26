@@ -20,7 +20,7 @@ public class ServiceHiApplication {
     @Value("${server.port}")
     String port;
 
-    @RequestMapping(value = "{/hi,/hello}")
+    @RequestMapping("/hi")
     public String sayHi(@RequestParam(value = "name",defaultValue = "Way") String name){
         return "Hi,"+name+" ,I am from port "+port;
     }
