@@ -8,3 +8,8 @@ eureka:
 spring:
   application:
     name: service-feign
+
+#feign自带熔断器 开启即可
+feign:
+  hystrix:
+    enabled: true
