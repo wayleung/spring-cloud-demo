@@ -1,5 +1,5 @@
 server:
-  port: 8763
+  port: 8762
 
 eureka:
   client:
@@ -8,3 +8,18 @@ eureka:
 spring:
   application:
     name: service-hi
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "hystrix.stream"
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#      cors:
+#        allowed-origins: "*"
+#        allowed-methods: "*"
